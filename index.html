@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Nilai Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Membuat Inputan Nilai-->
+    <h1>Kalkulator Nilai Mahasiswa</h1>
+    <label for="tugas">Nilai Tugas (30%):</label>
+    <input type="number" id="tugas" min="0" max="100"><br>
+    <label for="uts">Nilai UTS (30%):</label>
+    <input type="number" id="uts" min="0" max="100"><br>
+    <label for="uas">Nilai UAS (40%):</label>
+    <input type="number" id="uas" min="0" max="100"><br>
+    <button onclick="hitungNilai()">Hitung</button>
+
+    <h2>Hasil:</h2>
+    <p id="hasil" class="peringatan"></p>
+
+    <!--Membuat Tabel untuk Hasil-->
+    <table id="tabel-hasil">
+      <tr>
+        <th>Rata-rata</th>
+        <th>Huruf Mutu</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td id="rata-rata-sel"></td>
+        <td id="huruf-sel"></td>
+        <td id="status-sel"></td>
+      </tr>
+    </table>
+<!--Menampilkan Gambar berdasarkan Status kelulusan-->
+    <img id="lulus-gambar" src="lulus.png" alt="Gambar Lulus" class="status-gambar">
+    <img id="gagal-gambar" src="gagal.png" alt="Gambar Gagal" class="status-gambar">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
